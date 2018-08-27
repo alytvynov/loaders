@@ -15,5 +15,6 @@
     "psr-4": {
       "Common\\": "src/"
     }
-  }
+  },
+  "minimum-stability": "dev"
 }
