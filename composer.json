@@ -1,5 +1,5 @@
 {
-  "name": "lytvynov/loaders",
+  "name": "alytvynov/loaders",
   "description": "Common traits for classes",
   "type": "library",
   "require": {
