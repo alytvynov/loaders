@@ -2,9 +2,7 @@
   "name": "alytvynov/loaders",
   "description": "Common traits for classes",
   "type": "library",
-  "require": {
-    "php": ">=7.1"
-  },
+  "license": "MIT",
   "authors": [
     {
       "name": "Anton Lytvynov",
@@ -16,5 +14,6 @@
       "Common\\": "src/"
     }
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "require": {}
 }
