@@ -1,6 +1,6 @@
 <?php
 
-namespace Traits;
+namespace Common\Traits;
 
 trait RawLoader
 {

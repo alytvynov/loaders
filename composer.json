@@ -1,0 +1,19 @@
+{
+  "name": "lytvynov/loaders",
+  "description": "Common traits for classes",
+  "type": "library",
+  "require": {
+    "php": ">=7.1"
+  },
+  "authors": [
+    {
+      "name": "Anton Lytvynov",
+      "email": "lytvynov.anton@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Common\\": "src/"
+    }
+  }
+}
