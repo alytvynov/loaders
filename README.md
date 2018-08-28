@@ -1,8 +1,19 @@
 Class helpers
 =================
-
 Traits for classes and data manipulations.
 
+Installation
+--------
+```
+composer require alytvynov/timestampable
+```
+or
+```
+php composer.phar require alytvynov/timestampable
+```
+
+Example of usage
+--------
 ```php
 class Product
 {
