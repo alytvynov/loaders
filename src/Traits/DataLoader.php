@@ -9,7 +9,7 @@ trait DataLoader
      *
      * @return $this
      */
-    public function loadData(array $data)
+    public function loadData(array $data): self
     {
         foreach ($data as $key => $value) {
             if (!in_array($key, $this->getKeysNeedNotLoad())) {
@@ -28,7 +28,7 @@ trait DataLoader
      *
      * @return string
      */
-    public function convertKeySnakeCaseToCamelCase($key)
+    public function convertKeySnakeCaseToCamelCase(string $key): string
     {
         return str_replace('_', '', ucwords($key, '_'));
     }
@@ -49,7 +49,7 @@ trait DataLoader
      *
      * @return string
      */
-    protected function getMethod(string $property)
+    protected function getMethod(string $property): string
     {
         return sprintf('set%s' . ucfirst($property));
     }
