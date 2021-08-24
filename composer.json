@@ -17,5 +17,14 @@
   "minimum-stability": "dev",
   "require": {
     "php": "^7.3|^8.0"
-  }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "/Users/alytvynov/Documents/projects/loaders",
+      "options": {
+        "symlink": true
+      }
+    }
+  ]
 }
