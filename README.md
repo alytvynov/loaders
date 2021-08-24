@@ -1,20 +1,21 @@
 Class helpers
 =================
 Traits for classes and data manipulations.
+- Permits get class data in the `array`
+- Load data from `array` to object properties by setters. 
 
 Installation
 --------
-```
+```bash
 composer require alytvynov/timestampable
-```
-or
-```
-php composer.phar require alytvynov/timestampable
 ```
 
 Example of usage
 --------
 ```php
+use Common\Traits\DataLoader;
+use Common\Traits\RawLoader;
+
 class Product
 {
     use DataLoader;
@@ -23,17 +24,12 @@ class Product
     /**
      * @var int
      */
-    public $id;
+    protected int $id;
    
     /**
      * @var string
      */
-    public $title;
-   
-    /**
-     * @var string
-     */
-    public $description;
+    protected string $title;
    
     /**
      * @return int
@@ -41,14 +37,6 @@ class Product
     public function getId(): int
     {
         return $this->id;
-    }
-   
-    /**
-     * @param int $id
-     */
-    public function setId(int $id)
-    {
-        $this->id = $id;
     }
    
     /**
@@ -61,26 +49,14 @@ class Product
    
     /**
      * @param string $title
+     *
+     * @return $this                     
      */
-    public function setTitle(string $title)
+    public function setTitle(string $title): self
     {
         $this->title = $title;
-    }
-   
-    /**
-     * @return string
-     */
-    public function getDescription(): string
-    {
-        return $this->description;
-    }
-   
-    /**
-     * @param string $description
-     */
-    public function setDescription(string $description)
-    {
-        $this->description = $description;
+        
+        return $this;
     }
 }
    
@@ -91,7 +67,6 @@ Load data to object
 $data = [
     'id'          => 1,
     'title'       => 'This is product',
-    'description' => 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book . ',
 ];
    
 $product = new Product();

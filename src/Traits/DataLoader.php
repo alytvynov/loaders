@@ -13,7 +13,10 @@ trait DataLoader
     {
         foreach ($data as $key => $value) {
             if (!in_array($key, $this->getKeysNeedNotLoad())) {
-                $method = $this->getMethod($key);
+                $method = $this->getMethod(
+                    $this->convertKeySnakeCaseToCamelCase($key)
+                );
+
                 if (method_exists($this, $method)) {
                     $this->$method($value);
                 }
@@ -34,7 +37,7 @@ trait DataLoader
     }
 
     /**
-     * @return array
+     * @return array|string[]
      */
     protected function getKeysNeedNotLoad(): array
     {

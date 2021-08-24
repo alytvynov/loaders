@@ -9,9 +9,6 @@ trait RawLoader
      */
     public function toArray(): array
     {
-        $data          = get_object_vars($this);
-        $data['class'] = get_class($this);
-
-        return $data;
+        return get_object_vars($this);
     }
 }
