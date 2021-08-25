@@ -63,7 +63,7 @@ class Product
 ```
 
 Load data to object
-```php
+```
 $data = [
     'id'          => 1,
     'title'       => 'This is product',
@@ -74,6 +74,20 @@ $product->loadData($data);
 ```
 
 Get object's data as array
-```php
+```
 $product->toArray($data);
 ```
+
+## To run repository locally
+```bash
+git clone git@github.com:alytvynov/loaders.git
+cd loaders
+docker-compose up -d
+docker exec -it php_loaders bash -c "composer install"
+```
+
+Run tests
+```bash
+docker exec -it php_loaders bash -c "./vendor/bin/phpunit tests"
+```
+

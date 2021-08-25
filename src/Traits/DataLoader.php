@@ -37,6 +37,8 @@ trait DataLoader
     }
 
     /**
+     * Exclude this properties from loading
+     *
      * @return array|string[]
      */
     protected function getKeysNeedNotLoad(): array
@@ -54,6 +56,6 @@ trait DataLoader
      */
     protected function getMethod(string $property): string
     {
-        return sprintf('set%s' . ucfirst($property));
+        return sprintf('set%s', ucfirst($property));
     }
 }
