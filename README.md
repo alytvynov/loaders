@@ -1,17 +1,14 @@
-Class helpers
-=================
+# Loaders - helper traits
 Traits for classes and data manipulations.
 - Permits get class data in the `array`
 - Load data from `array` to object properties by setters. 
 
-Installation
---------
+## Add to your project
 ```bash
 composer require alytvynov/timestampable
 ```
 
-Example of usage
---------
+### Example of usage in class
 ```php
 use Common\Traits\DataLoader;
 use Common\Traits\RawLoader;
@@ -22,22 +19,9 @@ class Product
     use RawLoader;
    
     /**
-     * @var int
-     */
-    protected int $id;
-   
-    /**
      * @var string
      */
     protected string $title;
-   
-    /**
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
-    }
    
     /**
      * @return string
@@ -65,8 +49,7 @@ class Product
 Load data to object
 ```
 $data = [
-    'id'          => 1,
-    'title'       => 'This is product',
+    'title' => 'This is product',
 ];
    
 $product = new Product();
@@ -91,3 +74,8 @@ Run tests
 docker exec -it php_loaders bash -c "./vendor/bin/phpunit tests"
 ```
 
+## Additional information
+[Packagist](https://packagist.org/packages/alytvynov/loaders)
+
+## About Us
+Senior Web developer [Anton Lytvynov](https://lytvynov-anton.com/).

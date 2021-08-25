@@ -31,9 +31,9 @@ trait DataLoader
      *
      * @return string
      */
-    public function convertKeySnakeCaseToCamelCase(string $key): string
+    protected function convertKeySnakeCaseToCamelCase(string $key): string
     {
-        return str_replace('_', '', ucwords($key, '_'));
+        return lcfirst(str_replace('_', '', ucwords($key, '_')));
     }
 
     /**
